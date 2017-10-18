@@ -1,36 +1,41 @@
-const url = 'https://api.github.com/useres/candy34'
-let htmlBod = document.querySelector("body");
-function myGithub(name, git,email,website, bio, img){
-   let profile =
-   <header>
-       <h1>$(name</h1>
-</header>
-   <main class="wrapper">
-       <section id= "left">
-           <h2>The Basics</h2>
-           <ul>
-               <li>$(name)</li>
-               <li><a href="#">$(git)</a></li>
-               <li><p>$(email) </p></li>
-               <li><a href="#">$(website)</a></li>
+let VCard = document.querySelector(".wrapper");
+// function myGithub(name, git, email, website, bio, img) {
+  let req = new XMLHttpRequest();
+  req.addEventListener("load", display);
+  req.open("GET", "https://api.github.com/users/candy34");
+  req.send();
+  function display() {
+  let data = JSON.parse(this.responseText);
+  function profilePage(data){
+    const myProfile = `
+
+        <header class="header">
+          <h1>${data.name}</h1>
+        </header>
+        <div class="container">
+          <div class="basics">
+            <h2>The Basics</h2>
+            <ul>
+              <li><span>Name: </span>${data.name}</li>
+              <li><span>GitHub URL: </span>${data.html_url}</li>
+              <li><span>Email: </span>${data.email}</li>
+              <li><span>Company: </span>${data.company}</li>
+              <li><span>Website: </span>${data.blog}</li>
             </ul>
-        </section>
-        <section id= "middle">
-            <h2>Story</h2>
-            <p>$(bio)</p>
-        </section>
-        <section id= "right">
-            $(img)
-        </section>
-</main>;
-    return (profile);
-}
-fetch('https://api.github.com/users/candy34')
-    .then (function (res) {
-        return url.json ();
-    })
-    .then (funtion (Vcard) {
-        console.log(Vcard)
-     }) catch. (function ( err) {
-       console.log (data)
-     } )
+          </div>
+          <div class="bio">
+            <h2>The Bio</h2>
+            <p>${data.bio}</p>
+          </div>
+          <div class="image">
+            <img src=${data.avatar_url}></img>
+          </div>
+        </div>
+      `
+      return myProfile;
+    }
+    let allHtml = profilePage(data)
+
+
+   VCard.innerHTML = allHtml;
+   }
