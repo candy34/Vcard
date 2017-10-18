@@ -25,7 +25,7 @@ let VCard = document.querySelector(".wrapper");
           </div>
           <div class="bio">
             <h2>The Bio</h2>
-            <p>${data.bio}</p>
+            <p>${data.bio}Occupy mixtape waistcoat kogi aesthetic iceland. Hell of pitchfork iceland direct trade, bicycle rights pickled lo-fi health goth neutra. Succulents forage direct trade, trust fund activated charcoal yuccie photo booth yr austin mixtape. Occupy intelligentsia locavore offal letterpress selvage iPhone normcore franzen kogi tilde. Tacos williamsburg jianbing, butcher raclette beard brunch health goth cray pop-up leggings succulents microdosing neutra. Etsy 3 wolf moon tattooed cred 8-bit ramps fingerstache keytar tote bag. Marfa tattooed unicorn whatever. Taiyaki cray poke blog PBR&B. Craft beer post-ironic lyft seitan dreamcatcher, lomo retro pok pok.</p>
           </div>
           <div class="image">
             <img src=${data.avatar_url}></img>

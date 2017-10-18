@@ -1,4 +1,4 @@
-let Vcard = document.querySelector(".wrapper");
+let VCard = document.querySelector(".wrapper");
 let req = new XMLHttpRequest();
 req.addEventListerner("load", display);
 req.open("GET", 'https://api.github.com/users/candy34');
@@ -22,7 +22,7 @@ function display() {
         <li><span>Website:</span>${data.blog}</li>
       </ul>
     </div>
-    < div class="bio">
+    <div class="bio">
     <h2>The Bio</h2> <p>${data.bio}</p>
   </div> <div class="image">
       <img src=${data.avatar_url}></img>
