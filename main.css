@@ -43,7 +43,7 @@ header {
   background-position:left bottom;
   background-repeat: repeat-x;
   background-size: 32px 32px;
-  content: " ";
+  content: " ";*/
   display: block;
   position: absolute;
   bottom: 0px;
@@ -83,7 +83,7 @@ p {
 }
 
 ul {
-  flex-direction: column;
+  flex-direction: row;
   list-style: none;
   padding-left: 0;
 }
@@ -101,15 +101,17 @@ font-size: 15px;
 }
 
 .basics {
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 20%;
-  margin: 80px 80px 90px 90px;
+  margin: 50px 50px 60px 60px;
 }
 
 .bio {
-  flex-direction:column;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:row;
   width: 20%;
   justify-content: center;
   align-items: center;
@@ -138,6 +140,6 @@ margin-right: 70px;
   justify-content: space-between;
   align-content:space-around;
   margin-left: 60px;
-  margin-top: 0px;
+  margin-top: 50px;
   margin-right: 140px;
 }
